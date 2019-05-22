@@ -1,0 +1,11 @@
+<% if model.errors.any? %>
+  <div id="error_explanation" class="alert alert-warning">
+    <%= pluralize(model.error.count,"error") %>
+    を確認してください：
+    <ul class="mb-0">
+      <% model.errors.full_tasks.each do |task| %>
+        <li><%= task %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
